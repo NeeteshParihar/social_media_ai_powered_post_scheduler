@@ -13,7 +13,7 @@ const PlatformCard = ({ platform, isConnected, isConnecting, onConnect }: IPlatf
       type="button"
       disabled={isConnected || isConnecting}
       onClick={()=>onConnect(platform.id)} 
-      className={`flex items-center gap-3 p-3.5 rounded-xl border text-left transition-all ${isConnected? "border-red-200 bg-red-50 cursor-default": "border-slate-200 bg-slate-50 hover:border-slate-300 hover:bg-slate-100 cursor-pointer"}`}
+      className={`flex items-center gap-3 p-3.5 rounded-xl border text-left transition-all ${isConnected? "border-red-200 bg-red-50 cursor-default": "border-slate-200 bg-slate-50 hover:border-slate-300 hover:bg-slate-100 cursor-pointer"} ${isConnecting && "opacity-60"}`}
     >
       {/* icon */}
       <div className="p-2">
