@@ -1,5 +1,5 @@
 
-import type { Platform } from "../../assets/assets";
+import type { Platform } from "../../../../../assets/assets";
 
 interface IPlatformListProps {
     PLATFORMS: Platform[];

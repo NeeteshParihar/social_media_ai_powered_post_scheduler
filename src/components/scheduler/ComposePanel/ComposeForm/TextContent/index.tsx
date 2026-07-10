@@ -1,6 +1,6 @@
 interface ITextContentProps {
   content: string;
-  setContent: ( text: string ) => void;
+  setContent: (text: string) => void;
 }
 
 const TextContent = ({ content, setContent }: ITextContentProps) => {
@@ -27,3 +27,4 @@ const TextContent = ({ content, setContent }: ITextContentProps) => {
 };
 
 export default TextContent;
+
