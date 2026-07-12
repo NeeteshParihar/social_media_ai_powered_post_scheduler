@@ -73,7 +73,7 @@ const SchedulingContent = ({
                   onClick={() => handlePlatformslection(p.id)}
                   className={`p-2.5 rounded-md border text-xs ${isSelected ? "bg-red-500/80 text-white" : "bg-white border-slate-200 text-slate-400 hover:border-slate-300"}`}
                 >
-                  <p.icon classname="size-4.5" />
+                  <p.icon className="size-4.5" />
                 </button>
               );
             })}
@@ -84,8 +84,8 @@ const SchedulingContent = ({
       {/* displaying date and time  */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {/* date input */}
-        <div>
-          <CalendarIcon className="size-4 absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" />
+        <div className="relative">
+          <CalendarIcon className="size-4 absolute left-4 top-1/2 -translate-y-1/2 text-slate-600 " />
           <input
             type="date"
             className="w-full pl-11 pr-4 py-3 bg-slate-50 border border-slate-100 rounded-md text-slate-900 text-sm focus:outline-none transition-all"
@@ -94,10 +94,10 @@ const SchedulingContent = ({
           />
         </div>
         {/* time input */}
-        <div>
-          <ClockIcon className="size-4 absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" />
+        <div className="relative">
+          <ClockIcon className="size-4 absolute left-4 top-1/2 -translate-y-1/2 text-slate-600" />
           <input
-            type="date"
+            type="time"
             className="w-full pl-11 pr-4 py-3 bg-slate-50 border border-slate-100 rounded-md text-slate-900 text-sm focus:outline-none transition-all"
             value={scheduleTime}
             onChange={(e) => setScheduleTime(e.target.value)}

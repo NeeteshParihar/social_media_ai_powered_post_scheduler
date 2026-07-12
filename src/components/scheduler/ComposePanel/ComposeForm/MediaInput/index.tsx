@@ -1,11 +1,11 @@
 import { XIcon } from "lucide-react";
 
 interface IMediaInputProps {
-    mediaFile: File;
-    setMediaFile: ( file: File) => void;
+  mediaFile: File | null,
+  setMediaFile: (file: File | null) => void;
 }
 
-const MediaInput = ({ mediaFile, setMediaFile }:IMediaInputProps) => {
+const MediaInput = ({ mediaFile, setMediaFile }: IMediaInputProps) => {
   const handleMediaInput = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files?.[0]) {
       setMediaFile(e.target.files[0]);
@@ -35,6 +35,7 @@ const MediaInput = ({ mediaFile, setMediaFile }:IMediaInputProps) => {
           )}
           {/* button */}
           <button
+            aria-label="Remove selected media"
             type="button"
             onClick={() => setMediaFile(null)}
             className="absolute top-2 right-2 size-7 bg-slate-900/60 hover:bg-slate-900/80 text-white rounded-full flex items-center justify-center transition-colors"
@@ -44,6 +45,7 @@ const MediaInput = ({ mediaFile, setMediaFile }:IMediaInputProps) => {
         </div>
       ) : (
         <label
+          aria-label="select media"
           htmlFor="media-file"
           className="cursor-pointer flex items-center justify-center gap-2 p-5 py-10 border-2 border-dashed border-slate-200 rounded-xl hover:border-red-300  hover:bg-red-50/30 transition-all group"
         >
