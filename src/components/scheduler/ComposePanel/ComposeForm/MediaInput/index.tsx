@@ -1,6 +1,5 @@
 import { XIcon } from "lucide-react";
 
-
 interface IMediaInputProps {
     mediaFile: File;
     setMediaFile: ( file: File) => void;
